@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -17,13 +17,15 @@
       --badge-bg: #ff4e50;
     }
     * { margin:0; padding:0; box-sizing:border-box; }
-    html, body {
-      height:100%;
-      font-family:'Montserrat',sans-serif;
+    html {
       background: var(--dark-bg);
-      color: var(--text-light);
-      overflow-x:hidden;
+    }
+    body {
+      height:100vh;
+      font-family:'Montserrat',sans-serif;
+      background: url('https://guiadacalistenia.shop/images/8af611b165bbce80c0f101e37af99888.jpg') center/cover no-repeat;
       display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
     }
     .offer-page {
       position: relative;
@@ -35,6 +37,11 @@
       box-shadow: 0 12px 40px rgba(0,0,0,0.8);
       text-align: center;
       overflow: hidden;
+      animation: slowPulse 6s ease-in-out infinite;
+    }
+    @keyframes slowPulse {
+      0%,100% { transform: scale(1); }
+      50%     { transform: scale(1.03); }
     }
     .offer-page::before {
       content: '';
@@ -42,7 +49,7 @@
       top: -50%; left: -50%;
       width: 200%; height: 200%;
       background: radial-gradient(circle at center, rgba(230,57,70,0.3), transparent 70%);
-      animation: rotateBg 10s linear infinite;
+      animation: rotateBg 12s linear infinite;
       z-index: 0;
     }
     @keyframes rotateBg {
@@ -77,8 +84,8 @@
       animation: fadeIn 0.8s ease-out both 0.3s;
     }
     @keyframes fadeIn {
-      from { opacity:0; transform: translateY(10px);}
-      to   { opacity:1; transform: translateY(0);}
+      from { opacity:0; transform: translateY(10px); }
+      to   { opacity:1; transform: translateY(0); }
     }
     .price-wrap {
       margin-bottom: 1.8rem;
@@ -124,9 +131,6 @@
       color: var(--text-dark);
       animation: fadeIn 1s ease-out both 1s;
     }
-    footer {
-      display:none;
-    }
     @media (max-width:480px){
       .offer-page { padding:2rem 1rem 1rem; }
       h1 { font-size:1.8rem; }
@@ -145,14 +149,13 @@
     </p>
     <div class="price-wrap">
       <span class="old">R$ 19,90</span>
-      <span class="new">R$ 9,90</span>
+      <span class="new">R$ 10,00</span>
     </div>
     <a href="https://pay.hotmart.com/S100094357A?off=sw3jml89&checkoutMode=10&ref=X100935210N&bid=1753290550457"
        class="btn-cta">
-      EU QUERO POR R$ 9,90
+      EU QUERO POR R$ 10,00
     </a>
     <p class="guarantee">✅ Garantia incondicional de 7 dias ou seu dinheiro de volta</p>
   </div>
 </body>
 </html>
-```
